@@ -36,7 +36,7 @@ def take_price(message):
         for i in data:
             bot.send_message(message.chat.id, 'Название отеля: ' + str(i[1]) + ' Цена: ' + str(i[0]))
             try:
-                bot.send_photo(message.chat.id, photo=open('imgs/{}.jpg'.format(i[1]), 'rb'))
+                bot.send_photo(message.chat.id, photo=open('{}.jpg'.format(i[1]), 'rb'))
             except:
                 pass
         bot.send_message(message.chat.id, 'Чтобы выбрать другой Диапазон или страну нажмите Попробовать другой вариант')
